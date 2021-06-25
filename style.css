@@ -48,12 +48,16 @@ body {
     margin-right: 4px;
 }
 
-body.game {
-    text-align: center;
+.bg-image {
+    width: 100%;
     background: url(background.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     overflow: hidden;
+}
+
+body.game {
+    text-align: center;
 }
