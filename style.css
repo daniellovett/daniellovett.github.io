@@ -1,0 +1,49 @@
+.headline {
+    color: #bbbbbb;
+    font-size: 30pt;
+    line-height: 42pt;
+    font-weight: 300;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FBFBFB;
+    border: none;
+}
+
+.navbar-logo {
+    width: 100%;
+}
+
+.strength-card {
+    height: 200px;
+}
+
+.headline.active {
+    color: black;
+}
+
+.car-ind-dl {
+    background-color: black!important;
+}
+
+.skills-list-item {
+    color: #6c757d;
+}
+
+h2 {
+    font-size: 16pt;
+    font-weight: 400;
+}
+
+.pitch {
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12pt;
+}
+
+body {
+    background-color: #FBFBFB;
+}
+
+.skill-badge {
+    margin-right: 4px;
+}

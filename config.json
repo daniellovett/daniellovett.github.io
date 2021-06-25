@@ -1,0 +1,113 @@
+{
+    "skillLevels": {
+        "Expert": "bg-primary",
+        "Proficient": "bg-secondary",
+        "Functional": "bg-light text-dark border border-secondary"
+    },
+    "techSkills": {
+        "Data Analysis": {
+            "Expert": [
+                "Python",
+                "matplotlib",
+                "NumPy",
+                "SciPy"
+            ],
+            "Proficient": [
+                "scikit-learn",
+                "TensorFlow",
+                "NLTK",
+                "BeautifulSoup"
+            ],
+            "Functional": [
+                "R",
+                "SPSS Statistics"
+            ]
+        },
+        "Business Intelligence": {
+            "Expert": [
+                "Tableau",
+                "ArcGIS Dashboards"
+            ],
+            "Proficient": [
+                "Power BI",
+                "ArcGIS Insights",
+                "ArcGIS Business Analyst"
+            ]
+        },
+        "Data Processing": {
+            "Expert": [
+                "pandas",
+                "ETL",
+                "PostgreSQL"
+            ],
+            "Proficient": [
+                "SQL Server",
+                "MySQL",
+                "SQLAlchemy"
+            ],
+            "Functional": [
+                "AWS",
+                "Alteryx",
+                "MongoDB",
+                "NoSQL"
+            ]
+        },
+        "Web App Development": {
+            "Expert": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "jquery",
+                "plotly",
+                "D3.js"
+            ],
+            "Proficient": [
+                "Leaflet",
+                "Bootstrap"
+            ],
+            "Functional": [
+                "PHP",
+                "C#",
+                "Flask"
+            ]
+        },
+        "Design": {
+            "Expert": [
+                "Adobe Photoshop",
+                "Adobe Illustrator",
+                "Adobe InDesign"
+            ],
+            "Proficient": [
+                "Figma"
+            ],
+            "Functional": [
+                "Adobe XD"
+            ]
+        },
+        "APIs": {
+            "Expert": [
+                "ArcGIS API for Javascript 3.x/4.x",
+                "Dojo Toolkit"
+            ],
+            "Proficient": [
+                "US Census Bureau",
+                "Google Maps",
+                "MapBox"
+            ]   
+        }
+    },
+    "strengths": {
+        "Strategy": {
+            "text": "Managed marketing, digital engagement, and content strategy for live event calendars. Led long-term strategic planning to increase engagement and retention. Led the deployment of two new online platforms and exceeded goals for adoption and revenue. Improved customer retention by almost 100%.",
+            "skills": ["Cross-functional leadership", "Design thinking", "Mind-mapping", "Customer segmentation", "Research", "Strategic Fit", "Innovation", "Gap Analysis", "Core Capabilities", "Financial Analysis"]
+        },
+        "Analysis": {
+            "text": "Improved predictions of customer retention by fitting data to a classification model. Created accurate forecasts of sales for highly distinct live event ticket sales. Transformed and aggregated geospatial data from a variety of sources. Performed natural language processing on text to reduce inconsistencies in the data.",
+            "skills": ["Machine learning", "Natural language processing", "Data mining", "Exploratory data analysis", "Linear Regression", "Classification (logistic regression)", "Cluster analysis", "Time series trend analysis", "Forecasting", "Bayesian statistics", "Data warehousing", "Data integration", "Data visualization", "Geospatial analysis"]
+        },
+        "Design": {
+            "text": "Developed web applications using a variety of tools in an Agile development framework. Created requirements and delivered prototypes rapidly for immediate stakeholder feedback. Created wireframes for UI/UX design, focusing on user preferences, accessibility, and responsiveness. Designed logos, icons, and other assets for electronic and print media.",
+            "skills": ["Requirements gathering", "Agile development", "Wireframing", "UI/UX design", "User-centered design", "Rapid prototyping", "Iterative design", "Storytelling with data"]
+        }
+    }
+}
