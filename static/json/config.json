@@ -68,7 +68,8 @@
             "Functional": [
                 "PHP",
                 "C#",
-                "Flask"
+                "Flask",
+                "Unity"
             ]
         },
         "Design": {
@@ -108,6 +109,119 @@
         "Design": {
             "text": "Developed web applications using a variety of tools in an Agile development framework. Created requirements and delivered prototypes rapidly for immediate stakeholder feedback. Created wireframes for UI/UX design, focusing on user preferences, accessibility, and responsiveness. Designed logos, icons, and other assets for electronic and print media.",
             "skills": ["Requirements gathering", "Agile development", "Wireframing", "UI/UX design", "User-centered design", "Rapid prototyping", "Iterative design", "Storytelling with data"]
+        }
+    },
+    "colors": {
+        "Dark Layout": "#212529",
+        "Light Blue": "0DCAF0",
+        "Medium Blue": "0D6EFD",
+        "Secondary Gray": "6C757D",
+        "Background Pink": "D6C9C9",
+        "Light Gray": "F8F9FA",
+        "Green Indicator": "5C946E",
+        "Red Indicator": "FE7272"
+    },
+    "plotLayout": {
+        "linePlot": {
+            "width": 600,
+            "height": 350,
+            "divId": "linePlot",
+            "title": {
+                "text": "Mean Income for US Households",
+                "height": 40,
+                "gId": "areaPlotTitle"
+            },
+            "yAxis": {
+                "gId": "linePlotY",
+                "width": 60
+            },
+            "yTitle": {
+                "text": "2019 Dollars ($000)",
+                "width": 40,
+                "gId": "linePlotYTitle"
+            },
+            "xAxis": {
+                "gId": "linePlotX",
+                "height": 60
+            },
+            "pad": 10
+        },
+        "areaPlot": {
+            "width": 600,
+            "height": 350,
+            "divId": "areaPlot",
+            "title": {
+                "text": "Income Distribution by US Households",
+                "height": 40,
+                "gId": "areaPlotTitle"
+            },
+            "yAxis": {
+                "gId": "areaPlotY",
+                "width": 60
+            },
+            "yTitle": {
+                "text": "Share of Aggregate Income (%)",
+                "width": 40,
+                "gId": "areaPlotYTitle"
+            },
+            "xAxis": {
+                "gId": "areaPlotX",
+                "height": 60
+            },
+            "pad": 10
+        },
+        "fields": {
+            "highestFifth": {
+                "name": "Highest Fifth",
+                "stroke-width": "2",
+                "color": "#F26430",
+                "legend": true
+            },
+            "fourthFifth": {
+                "name": "Fourth Fifth",
+                "stroke-width": "2",
+                "color": "#B65132",
+                "legend": true
+            },
+            "thirdFifth": {
+                "name": "Middle Fifth",
+                "stroke-width": "2",
+                "color": "#7A3D34",
+                "legend": true
+            },
+            "secondFifth": {
+                "name": "Second Fifth",
+                "stroke-width": "2",
+                "color": "#3E2A36",
+                "legend": true
+            },
+            "lowestFifth": {
+                "name": "Lowest Fifth",
+                "stroke-width": "2",
+                "color": "#011638",
+                "legend": true
+            },
+            "doubleMedian": {
+                "name": "Two Times Median",
+                "color": "#6C757D",
+                "stroke-width": ".75",
+                "stroke-dasharray": "2,2",
+                "legend": false
+            },
+            "twoThirdsMedian": {
+                "name": "Two-thirds Median",
+                "color": "#6C757D",
+                "stroke-width": ".75",
+                "stroke-dasharray": "2,2",
+                "legend": false
+            },
+            "middleClass": {
+                "name": "Middle Class",
+                "color": "none",
+                "legend": true,
+                "stroke-width": "1",
+                "stroke-dasharray": "2,2"
+            }
         }
     }
 }

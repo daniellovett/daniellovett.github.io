@@ -1,5 +1,5 @@
 function carouselBtnClick(evt) {
-    var current = document.getElementsByClassName("headline active");
+    let current = document.getElementsByClassName("headline active");
     current[0].className = current[0].className.replace(" active", "");
     evt.target.className += " active";
 }
@@ -7,14 +7,15 @@ function carouselBtnClick(evt) {
 function init() {
     const newDiv = "<div></div>";
 
-    $("#navbar-container").load("navbar.html");
+    $("#navbar-container").load("/static/html/navbar.html");
+    $("#projects-container").load("/static/html/projects.html");
 
-    $.get("config.json", function (config) {
+    $.get("/static/json/config.json", function (config) {
         const levels = config.skillLevels;
         const techSkills = config.techSkills;
         const strengths = config.strengths;
         
-        $("#carousel-container").load("carousel.html", function() {
+        $("#carousel-container").load("/static/html/carousel.html", function() {
             const carouselBtns = $("#strengths-carousel-btns");
             const carousel = $("#strengths-carousel");
             Object.entries(strengths).forEach(function (strength, i) {
@@ -64,7 +65,7 @@ function init() {
         });
         
 
-        $("#skills-container").load("skills.html", function() {
+        $("#skills-container").load("/static/html/list.html", function() {
             const skillsList = $("#skills-list")[0];
             Object.entries(techSkills).forEach(function (area) {
                 let li = $(`<li>${area[0]}: </li>`);

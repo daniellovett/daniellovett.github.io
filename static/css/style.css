@@ -1,0 +1,98 @@
+body {
+    background-color: #D6C9C9;
+}
+
+body.game {
+    text-align: center;
+    background: url(/static/images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar-logo {
+    width: 100%;
+}
+
+.pitch {
+    color: #F8F9FA;
+    font-size: 12pt;
+}
+
+#main-container {
+    background-color: #F8F9FA;
+    box-shadow: 0px 0px 5px 5px #21252925;
+}
+
+.headline {
+    color: #6C757D;
+    font-size: 30pt;
+    line-height: 42pt;
+    font-weight: 300;
+    text-align: left;
+    background-color: #F8F9FA;
+    border: none;
+}
+
+.headline.active {
+    color: #212529;
+}
+
+.strength-card {
+    min-height: 200px;
+}
+
+.skill-badge {
+    margin-right: 4px;
+}
+
+h2 {
+    font-size: 16pt;
+    font-weight: 400;
+}
+
+
+.skills-list-item {
+    color: #6C757D;
+}
+
+#legendHeader {
+    text-align: center;
+    font-size: 16pt;
+}
+
+.legend-table {
+    font-size: 10pt;
+    margin-bottom: 15px;
+}
+
+.legend-table td {
+    padding: 1px 7px;
+}
+
+.legend-table td.legend-key {
+    padding: 0px;
+}
+
+.legend-table .legend-key svg {
+    margin: none;
+}
+
+.material-icons.down-arrow-icon {
+    color: #FE7272;
+    line-height: 10px;
+    position: relative;
+    top: 7px;
+    left: -4px;
+    width: 12px;
+    height: 10px;
+}
+
+.material-icons.up-arrow-icon {
+    color: #5C946E;
+    line-height: 10px;
+    position: relative;
+    top: 7px;
+    left: -4px;
+    width: 12px;
+    height: 10px;
+}
