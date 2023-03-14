@@ -1,1 +1,0 @@
-System.register([],(function(e){return{execute:function(){e({wrap:"Umbrechen",verticalAlignment:"Vertikale Ausrichtung"})}}}));

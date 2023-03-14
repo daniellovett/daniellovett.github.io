@@ -1,1 +1,0 @@
-System.register([],(function(e){return{execute:function(){e({wrap:"Wrap",verticalAlignment:"Căn dọc"})}}}));

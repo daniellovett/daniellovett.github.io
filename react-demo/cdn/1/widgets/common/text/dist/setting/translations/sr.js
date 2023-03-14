@@ -1,1 +1,0 @@
-System.register([],(function(e){return{execute:function(){e({wrap:"Umotaj",verticalAlignment:"Vertikalno poravnanje"})}}}));
