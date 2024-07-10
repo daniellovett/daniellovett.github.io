@@ -9,7 +9,6 @@ interface DropDown {
   options: string[]
 }
 
-
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -48,7 +47,8 @@ export class HomeComponent implements OnInit {
       'designer',
       'developer'
     ]
-  }
+  };
+
   dropdownTwo: DropDown = {
     value: 'intuitive',
     expanded: false,
@@ -57,7 +57,8 @@ export class HomeComponent implements OnInit {
       'responsive',
       'accessible'
     ]
-  }
+  };
+
   dropdownThree: DropDown = {
     value: 'geospatial analysis',
     expanded: false,
@@ -65,7 +66,7 @@ export class HomeComponent implements OnInit {
       'geospatial analysis',
       'data visualization'
     ]
-  }
+  };
 
   constructor(public router: Router, public route: ActivatedRoute) {
   }
@@ -83,67 +84,67 @@ export class HomeComponent implements OnInit {
   };
 
   updateContent() {
-    const selectedOptions = [this.dropdownOne.value, this.dropdownTwo.value, this.dropdownThree.value].join(', ')
+    const selectedOptions = [this.dropdownOne.value, this.dropdownTwo.value, this.dropdownThree.value].join(', ');
     switch (selectedOptions) {
       // Researcher
       case 'researcher, intuitive, geospatial analysis':
-        this.selectedTemplate = this.researchIntuitiveGIS
+        this.selectedTemplate = this.researchIntuitiveGIS;
         break;
       case 'researcher, intuitive, data visualization':
-        this.selectedTemplate = this.researchIntuitiveDataviz
+        this.selectedTemplate = this.researchIntuitiveDataviz;
         break;
       case 'researcher, responsive, geospatial analysis':
-        this.selectedTemplate = this.researchResponsiveGIS
+        this.selectedTemplate = this.researchResponsiveGIS;
         break;
       case 'researcher, responsive, data visualization':
-        this.selectedTemplate = this.researchResponsiveDataviz
+        this.selectedTemplate = this.researchResponsiveDataviz;
         break;
       case 'researcher, accessible, geospatial analysis':
-        this.selectedTemplate = this.researchAccessibleGIS
+        this.selectedTemplate = this.researchAccessibleGIS;
         break;
       case 'researcher, accessible, data visualization':
-        this.selectedTemplate = this.researchAccessibleDataviz
+        this.selectedTemplate = this.researchAccessibleDataviz;
         break;
 
       // Designer
       case 'designer, intuitive, geospatial analysis':
-        this.selectedTemplate = this.designIntuitiveGIS
+        this.selectedTemplate = this.designIntuitiveGIS;
         break;
       case 'designer, intuitive, data visualization':
-        this.selectedTemplate = this.designIntuitiveDataviz
+        this.selectedTemplate = this.designIntuitiveDataviz;
         break;
       case 'designer, responsive, geospatial analysis':
-        this.selectedTemplate = this.designResponsiveGIS
+        this.selectedTemplate = this.designResponsiveGIS;
         break;
       case 'designer, responsive, data visualization':
-        this.selectedTemplate = this.designResponsiveDataviz
+        this.selectedTemplate = this.designResponsiveDataviz;
         break;
       case 'designer, accessible, geospatial analysis':
-        this.selectedTemplate = this.designAccessibleGIS
+        this.selectedTemplate = this.designAccessibleGIS;
         break;
       case 'designer, accessible, data visualization':
-        this.selectedTemplate = this.designAccessibleDataviz
+        this.selectedTemplate = this.designAccessibleDataviz;
         break;
       
       // Developer
       case 'developer, intuitive, geospatial analysis':
-        this.selectedTemplate = this.developIntuitiveGIS
+        this.selectedTemplate = this.developIntuitiveGIS;
         break;
       case 'developer, intuitive, data visualization':
-        this.selectedTemplate = this.developIntuitiveDataviz
+        this.selectedTemplate = this.developIntuitiveDataviz;
         break;
       case 'developer, responsive, geospatial analysis':
-        this.selectedTemplate = this.developResponsiveGIS
+        this.selectedTemplate = this.developResponsiveGIS;
         break;
       case 'developer, responsive, data visualization':
-        this.selectedTemplate = this.developResponsiveDataviz
+        this.selectedTemplate = this.developResponsiveDataviz;
         break;
       case 'developer, accessible, geospatial analysis':
-        this.selectedTemplate = this.developAccessibleGIS
+        this.selectedTemplate = this.developAccessibleGIS;
         break;
       case 'developer, accessible, data visualization':
-        this.selectedTemplate = this.developAccessibleDataviz
+        this.selectedTemplate = this.developAccessibleDataviz;
         break;
-    }
-  }
+    };
+  };
 }
