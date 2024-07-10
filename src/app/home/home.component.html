@@ -1,0 +1,235 @@
+<div class="body__intro-text">
+    <div>
+        As a UI/UX
+        <div id="dropdownOne" class="dropdown" (mouseout)="onLeaveDropdown($event, 'dropdownOne')">
+            <div class="dropdown__container">
+                <div [class]="{'dropdown__button': true, 'dropdown__button--expanded': dropdownOne.expanded}" (click)="dropdownOne.expanded = true">
+                    {{dropdownOne.value}}
+                </div>
+                <div [class]="{'dropdown__menu': true, 'dropdown__menu--hidden': !dropdownOne.expanded}">
+                    <div *ngFor="let option of dropdownOne.options"
+                        [class]="{'dropdown__item': true, 'dropdown__item--selected': dropdownOne.value === option}"
+                        (click)="dropdownOne.value = option; dropdownOne.expanded = false; updateContent();"
+                    >
+                        {{option}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        I build
+        <div id="dropdownTwo" class="dropdown" (mouseout)="onLeaveDropdown($event, 'dropdownTwo')">
+            <div class="dropdown__container">
+                <div [class]="{'dropdown__button': true, 'dropdown__button--expanded': dropdownTwo.expanded}" (click)="dropdownTwo.expanded = true">
+                    {{dropdownTwo.value}}
+                </div>
+                <div [class]="{'dropdown__menu': true, 'dropdown__menu--hidden': !dropdownTwo.expanded}">
+                    <div *ngFor="let option of dropdownTwo.options"
+                        [class]="{'dropdown__item': true, 'dropdown__item--selected': dropdownTwo.value === option}"
+                        (click)="dropdownTwo.value = option; dropdownTwo.expanded = false; updateContent();"
+                    >
+                        {{option}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        applications
+    </div>
+    <div>
+        for
+        <div id="dropdownThree" class="dropdown" (mouseout)="onLeaveDropdown($event, 'dropdownThree')">
+            <div class="dropdown__container">
+                <div [class]="{'dropdown__button': true, 'dropdown__button--expanded': dropdownThree.expanded}" (click)="dropdownThree.expanded = true">
+                    {{dropdownThree.value}}
+                </div>
+                <div [class]="{'dropdown__menu': true, 'dropdown__menu--hidden': !dropdownThree.expanded}">
+                    <div *ngFor="let option of dropdownThree.options"
+                        [class]="{'dropdown__item': true, 'dropdown__item--selected': dropdownThree.value === option}"
+                        (click)="dropdownThree.value = option; dropdownThree.expanded = false; updateContent();"
+                    >
+                        {{option}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-container *ngTemplateOutlet="selectedTemplate"></ng-container>
+
+<!-- Research -->
+<ng-template #researchIntuitiveGIS>
+    <div class="body__detail-text">
+        Through interviews, surveys, requirements gathering, and persona creation, ensure the following considerations are addressed:
+        <ul>
+            <li>User familiarity with geospatial analysis</li>
+            <li>Proficiency with GIS technology</li>
+            <li>Experience with and opinion of similar applications</li>
+        </ul>
+    </div>
+</ng-template>
+<ng-template #researchIntuitiveDataviz>
+    <div class="body__detail-text">
+        Through interviews, surveys, requirements gathering, and persona creation, ensure the following considerations are addressed:
+        <ul>
+            <li>Knowledge of the data domain and specific datasets</li>
+            <li>Research questions and other needs to be answered through visualizations</li>
+            <li>Availability of the data and any data transformations required</li>
+            <li>Appropriate visualization formats for specific use cases</li>
+        </ul>
+    </div>
+</ng-template>
+<ng-template #researchResponsiveGIS>
+    <div class="body__detail-text">
+        Through interviews, surveys, requirements gathering, and persona creation, ensure the following considerations are addressed:
+        <ul>
+            <li>The device ownership and browser usage of potential users</li>
+            <li>Appropriate devices for application use, such as tablets for field mapping</li>
+            <li>Balance of maps, analysis tools, text, and other interfaces according to priority</li>
+        </ul>
+    </div>
+</ng-template>
+<ng-template #researchResponsiveDataviz>
+    <div class="body__detail-text">
+        Through interviews, surveys, requirements gathering, and persona creation, ensure the following considerations are addressed:
+        <ul>
+            <li>Interactivity and complexity of visualizations</li>
+            <li>Use of text for analysis and contextual help</li>
+        </ul>
+    </div>
+</ng-template>
+<ng-template #researchAccessibleGIS>
+    <div class="body__detail-text">
+        Through interviews, surveys, requirements gathering, and persona creation, ensure the following considerations are addressed:
+        <ul>
+            <li>Inclusion of users with accessibility concerns in research and testing</li>
+            <li>Familiarity with best practices around map accessibility, such as descriptive text and clear symbology</li>
+        </ul>
+    </div>
+</ng-template>
+<ng-template #researchAccessibleDataviz>
+    <div class="body__detail-text">
+        Through interviews, surveys, requirements gathering, and persona creation, ensure the following considerations are addressed:
+        <ul>
+            <li>Simplicity of visualizations for broad understanding</li>
+            <li>Understanding of best practices around web accessibility for interactive elements</li>
+        </ul>
+    </div>
+</ng-template>
+
+<!-- Design -->
+<ng-template #designIntuitiveGIS>
+    <div class="body__detail-text">
+        Designing wireframes, interactive user flows, and demos should follow these principles:
+        <ul>
+            <li>Effective use of <a href="https://www.mapuipatterns.com/" target="_blank">design patterns for web mapping</a></li>
+            <li>Use of industry standard GIS iconography through libraries like <a href="https://esri.github.io/calcite-ui-icons/" target="_blank">Calcite</a></li>
+            <li>Leverage common component libraries</li>
+            <li>Simplify interfaces by designing linear workflows with contextual guidance for users</li>
+        </ul>
+    </div>
+</ng-template>
+<ng-template #designIntuitiveDataviz>
+    <div class="body__detail-text">
+        Designing wireframes, interactive user flows, and demos should follow these principles:
+        <ul>
+            <li>A high "data-ink ratio" and similar <a href="https://www.edwardtufte.com/tufte/books_vdqi" target="_blank">best practices</a></li>
+            <li>Use of standard design patterns for interactive visualizations, such as filters, tooltips, and legends</li>
+            <li>Intelligent use of interactions between web maps and charts for dynamic filtering, symbology, and pop-ups</li>
+        </ul>
+    </div>
+</ng-template>
+<ng-template #designResponsiveGIS>
+    <div class="body__detail-text">
+        Designing wireframes, interactive user flows, and demos should follow these principles:
+        <ul>
+            <li>Balancing the visual hierarchy of maps compared to other UI functionality</li>
+            <li>User workflows that leverage mobile design patterns to create simple, navigable interfaces</li>
+            <li>Incorporating touch interactions into map designs</li>
+        </ul>
+    </div>
+</ng-template>
+<ng-template #designResponsiveDataviz>
+    <div class="body__detail-text">
+        Designing wireframes, interactive user flows, and demos should follow these principles:
+        <ul>
+            <li>Sample charts accurately represent the type of data that will be displayed</li>
+            <li>Charts are appropriately positioned in the visual hierarchy of the application based on the screen size</li>
+        </ul>
+    </div>
+</ng-template>
+<ng-template #designAccessibleGIS>
+    <div class="body__detail-text">
+        Designing wireframes, interactive user flows, and demos should follow these principles:
+        <ul>
+            <li>Colors and other symbology in maps should be tested with <a href="https://www.color-blindness.com/coblis-color-blindness-simulator/" target="_blank">simulated color vision deficiency</a></li>
+            <li>Symbology and iconography should align with any common standards related to the subject matter</li>
+        </ul>
+    </div>
+</ng-template>
+<ng-template #designAccessibleDataviz>
+    <div class="body__detail-text">
+        Designing wireframes, interactive user flows, and demos should follow these principles:
+        <ul>
+            <li>Clarity and legibility in chart symbology through the use of both color and pattern</li>
+            <li>Inclusion of descriptive text through labels and dynamic text summaries</li>
+        </ul>
+    </div>
+</ng-template>
+
+<!-- Develop -->
+<ng-template #developIntuitiveGIS>
+    <div class="body__detail-text">
+        These development practices contribute significantly to a well-executed application:
+        <ul>
+            <li>Leveraging preexisting component and web mapping libraries such as <a href="https://m3.material.io/" target="_blank">Material Design</a> and the <a href="https://developers.arcgis.com/javascript/latest/" target="_blank">ArcGIS SDK for Javascript</a></li>
+            <li>Iterative development with consistent demos and feedback to ensure the functionality meets user needs</li>
+            <li>Regular performance testing and balancing of client-side operations and Python geoprocessing scripts</li>
+        </ul>
+    </div>
+</ng-template>
+<ng-template #developIntuitiveDataviz>
+    <div class="body__detail-text">
+        These development practices contribute significantly to a well-executed application:
+        <ul>
+            <li>Using well-maintained and reputable charting libraries including <a href="https://www.chartjs.org/" target="_blank">chart.js</a>, <a href="https://d3js.org/" target="_blank">d3.js</a>, or <a href="https://plotly.com/javascript/" target="_blank">plotly.js</a></li>
+            <li>Integrating dynamic data sources for flexibility in data exploration</li>
+            <li>Selectively customizing chart style and layout to best match the application design and represent the data presented</li>
+        </ul>
+    </div>
+</ng-template>
+<ng-template #developResponsiveGIS>
+    <div class="body__detail-text">
+        These development practices contribute significantly to a well-executed application:
+        <ul>
+            <li>Incorporate and test touch gestures with map functionality</li>
+            <li>Include navigation for users to easily alternate between a map view and other modes</li>
+        </ul>
+    </div>
+</ng-template>
+<ng-template #developResponsiveDataviz>
+    <div class="body__detail-text">
+        These development practices contribute significantly to a well-executed application:
+        <ul>
+            <li>Ensure charts dynamically adjust based on screen dimension</li>
+        </ul>
+    </div>
+</ng-template>
+<ng-template #developAccessibleGIS>
+    <div class="body__detail-text">
+        These development practices contribute significantly to a well-executed application:
+        <ul>
+            <li>Testing map symbology and interactivity extensively to ensure consistent accessibility</li>
+            <li>Incorporating workflows for users interacting with maps through an alternative interface, such as a screen reader</li>
+        </ul>
+    </div>
+</ng-template>
+<ng-template #developAccessibleDataviz>
+    <div class="body__detail-text">
+        These development practices contribute significantly to a well-executed application:
+        <ul>
+            <li>Effective use of text descriptions through tooltips, legends, and labels</li>
+            <li>Supporting chart components with appropriate aria attributes</li>
+        </ul>
+    </div>
+</ng-template>

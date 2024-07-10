@@ -1,0 +1,12 @@
+:host {
+    flex: 1 1 650px;
+    padding: 0px 100px;
+    margin: 0px 100px;
+    border-left: 2px solid black;
+    @media (prefers-color-scheme: dark) {
+        border-left: 2px solid white;
+    }
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
