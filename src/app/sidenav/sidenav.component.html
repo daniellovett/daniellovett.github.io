@@ -1,0 +1,19 @@
+<div>
+    <nav>
+    <div>
+        <a tabindex="0" (click)="router.navigate(['/home'])">
+            Home
+        </a>
+    </div>
+    <div>
+        Projects
+        <ul class="sidenav__menu">
+            <li *ngFor="let p of projects" class="sidenav__menu-item">
+                <a tabindex="0" (click)="router.navigate([p.route])">
+                    {{p.label}}
+                </a>
+            </li>
+        </ul>
+    </div>
+    </nav>
+</div>

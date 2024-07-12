@@ -1,6 +1,13 @@
 <div class="navbar">
-  <div class="navbar__brand">Daniel Lovett</div>
+  <div class="navbar__brand" tabindex="0" (click)="router.navigate(['/home'])">Daniel Lovett</div>
 </div>
-<div class="body__container">
-  <app-home></app-home>
+<div class="app-body">
+  <div class="app-body__main">
+    <app-sidenav class="sidenav"></app-sidenav>
+    <div class="app-body__separator"></div>
+    <div class="component-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="footer">&copy; Daniel Lovett{{copyText}} | All rights reserved</div>
 </div>

@@ -1,0 +1,24 @@
+<div #dropdownContainer class="dropdown__container" (mouseout)="onLeaveDropdown($event)">
+    <div
+        role="button"
+        aria-haspopup="listbox"
+        [attr.aria-label]="'expand ' + label"
+        [attr.aria-expanded]="expanded"
+        [attr.aria-controls]="'dropdown' + index"
+        tabindex="0"
+        [class]="{'dropdown__button': true, 'dropdown__button--expanded': expanded}"
+        (keydown)="onButtonKeyDown($event)"
+        (click)="toggleDropdown()"
+    >
+        {{value}}
+    </div>
+    <app-dropdown-menu
+        *ngIf="expanded"
+        [options]="options"
+        [value]="value"
+        [label]="label"
+        [index]="index"
+        (optionSelected)="selectOption($event)"
+        (closeDropdown)="toggleDropdown()"
+    ></app-dropdown-menu>
+</div>

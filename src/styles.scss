@@ -3,6 +3,12 @@
 @import "theme";
 
 html, body {
+    @include mat.typography-level($portfolio-typography-config, 'body-1');
+    background-color: #dfdfdf;
+    @media (prefers-color-scheme: dark) {
+        background-color: black;
+        color: white;
+    }
     height: 100%;
     width: 100%;
     margin: 0px;
@@ -11,20 +17,24 @@ html, body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-    @include mat.typography-level($portfolio-typography-config, 'body-1');
-    @media (prefers-color-scheme: dark) {
-        background-color: black;
-        color: white;
-    }
 }
 
 a {
     text-decoration: none;
     background-color: black;
     color: mat.get-color-from-palette($portfolio-primary, 600);
-
+    cursor: pointer;
+    
     &:hover {
         color: mat.get-color-from-palette($portfolio-primary, 200);
+        
+        &:visited {
+            color: mat.get-color-from-palette($portfolio-primary, 200);
+        }
+    }
+
+    &:visited {
+        color: mat.get-color-from-palette($portfolio-primary, 600);
     }
 }
 
@@ -36,7 +46,10 @@ li:not(:last-child) {
     flex: 0 0 auto;
     margin: 0px;
     padding: 10px 25px;
-    border-bottom: 2px solid mat.get-color-from-palette($portfolio-accent, 200);
+    border-bottom: 4px solid mat.get-color-from-palette($portfolio-primary, 900);
+    @media (prefers-color-scheme: dark) {
+        border-bottom: 4px solid mat.get-color-from-palette($portfolio-accent, 200);
+    }
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -44,6 +57,7 @@ li:not(:last-child) {
 
     &__brand {
         @include mat.typography-level($portfolio-typography-config, 'headline-1');
+        cursor: pointer;
     }
 
     &__item {
@@ -51,17 +65,59 @@ li:not(:last-child) {
     }
 }
 
-.body {
-    &__container {
-        flex: 1 1 auto;
-        padding: 100px;
-        height: 100%;
+.footer {
+    flex: 0 0 auto;
+    margin: 0px;
+    padding: 10px 25px;
+    border-top: 2px solid mat.get-color-from-palette($portfolio-primary, 900);
+    @media (prefers-color-scheme: dark) {
+        border-top: 2px solid mat.get-color-from-palette($portfolio-accent, 200);
+    }
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    @include mat.typography-level($portfolio-typography-config, 'subtitle-2');
+}
+
+.sidenav {
+    @include mat.typography-level($portfolio-typography-config, 'subtitle-1');
+    
+    &__menu {
+        padding-inline-start: 10px;
+        list-style: none;
+        margin: 5px 0px;
+    }
+    
+}
+
+.app-body {
+    flex: 1 1 auto;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    &__main {
+        flex: 1 0 auto;
+        padding: 50px 50px 100px;
+        overflow: hidden;
         display: flex;
         flex-direction: row;
-        justify-content: start;
+        justify-content: flex-start;
         align-items: stretch;
-        overflow-x: hidden;
-        overflow-y: auto;
+        gap: 50px;
+    }
+
+    &__separator {
+        flex: 0 0 0px;
+        border-left: 2px solid black;
+        @media (prefers-color-scheme: dark) {
+            border-left: 2px solid white;
+        }
     }
 
     &__intro-text {
@@ -73,14 +129,12 @@ li:not(:last-child) {
     }
 
     &__content {
-        overflow: auto;
-        flex: 1.5 1 60%;
-        padding-left: 100px;
-    }
-
-    &__detail-text {
-        @include mat.typography-level($portfolio-typography-config, 'headline-6');
-        width: 100%;
+        flex: 1 1 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: stretch;
+        gap: 50px;
     }
 
     &__header-2 {
@@ -94,37 +148,11 @@ li:not(:last-child) {
             border-bottom: 1px solid white;
         }
     }
+}
 
-    &__sample-persona {
-        width: 100%;
-        padding: 0px;
-        margin: 0px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: stretch;
-        gap: 25px;
-
-        &-column {
-            @include mat.typography-level($portfolio-typography-config, 'subtitle-1');
-            flex: 1 1 33%;
-        }
-
-        &-column--2x {
-            @include mat.typography-level($portfolio-typography-config, 'subtitle-1');
-            flex: 1 1 66%;
-        }
-
-        &-thumbnail {
-            width: 100%;
-        }
-    }
-
-    &__icon {
-        display: inline-block;
-        vertical-align: middle;
-        font-family: 'Material Icons';
-    }
+.component-container {
+    flex: 1 1 85%;
+    display: flex;
 }
 
 .dropdown {
@@ -192,6 +220,7 @@ li:not(:last-child) {
 
     &__item {
         background-color: mat.get-color-from-palette($portfolio-primary, 900);
+        line-height: 50px;
         padding: 0px 10px;
         cursor: pointer;
         
@@ -217,56 +246,168 @@ li:not(:last-child) {
     }
 }
 
-// Responsive
+.project {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 24px;
 
-$breakpoint-mobile: 700px;
-$breakpoint-tablet: 1200px;
+    &-title {
+        flex: 0 0 auto;
+        @include mat.typography-level($portfolio-typography-config, 'headline-2');
+        border-bottom: 2px solid mat.get-color-from-palette($portfolio-primary, 400);
+    }
 
-@media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
-    .body {
-        &__container {
-            padding: 50px;
+    &-summary {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: stretch;
+        gap: 50px;
+
+        &__body {
+            flex: 1 1 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: flex-start;
+            gap: 24px;
         }
 
-        &__intro-text {
-            @include mat.typography-level($portfolio-typography-config, 'headline-6');
+        &__list {
+            margin: 0px;
         }
 
-        &__detail-text {
-            @include mat.typography-level($portfolio-typography-config, 'headline-6');
+        &__highlight {
+            flex: 1 1 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: stretch;
+            gap: 12px;
+        }
+
+        &__img {
+            width: 100%;
+        }
+
+        &__caption {
+            width: 100%;
+            @include mat.typography-level($portfolio-typography-config, 'caption');
+            text-align: center;
         }
     }
 }
 
+.case-study {
+    color: white;
+    background-color: mat.get-color-from-palette($portfolio-primary, 700);
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+
+    &__icon {
+        font-family: 'Material Icons';
+        font-size: 75px;
+        line-height: 75px;
+    }
+
+    &:hover {
+        color: mat.get-color-from-palette($portfolio-primary, 100);
+
+        &:visited {
+            color: mat.get-color-from-palette($portfolio-primary, 100);
+        }
+    }
+
+    &:visited {
+        color: white;
+    }
+
+    &:active {
+        color: mat.get-color-from-palette($portfolio-primary, 100);
+    }
+}
+
+// Responsive
+$breakpoint-mobile: 700px;
+$breakpoint-tablet: 1200px;
+
+@media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+    .app-body {
+        &__separator {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
+    .sidenav {
+        display: none;
+        visibility: hidden;
+    }
+
+    .project-summary {
+        flex-direction: column;
+        @include mat.typography-level($portfolio-typography-config, 'body-2');
+    }
+}
+
 @media (max-width: $breakpoint-mobile) {
-    .body {
-        &__container {
-            padding: 25px;
+    .app-body {
+        &__main {
+            padding: 25px 25px 50px;
         }
 
         &__intro-text {
-            @include mat.typography-level($portfolio-typography-config, 'subtitle-2');
-            line-height: 40px;
+            @include mat.typography-level($portfolio-typography-config, 'headline-6');
         }
 
         &__intro-line {
             margin: 5px 0px;
         }
 
-        &__detail-text {
-            @include mat.typography-level($portfolio-typography-config, 'subtitle-2');
+        &__separator {
+            display: none;
+            visibility: hidden;
         }
     }
 
     .dropdown {
+        @include mat.typography-level($portfolio-typography-config, 'caption');
         &__button {
-            font-size: 1.3em;
             line-height: 40px;
+
+            &::after {
+                font-size: 16pt;
+            }
         }
 
         &__item {
-            font-size: 1.3em;
             line-height: 40px;
+            
+            &::after {
+                font-size: 16pt;
+            }
         }
+    }
+
+    .sidenav {
+        display: none;
+        visibility: hidden;
+    }
+
+    .project-summary {
+        flex-direction: column;
+        @include mat.typography-level($portfolio-typography-config, 'body-2');
+        gap: 24px;
     }
 }

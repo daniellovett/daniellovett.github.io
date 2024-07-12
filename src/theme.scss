@@ -14,18 +14,18 @@ $portfolio-body-family: 'Roboto', Helvetica, sans-serif;
 $portfolio-link-family: 'Roboto Mono', monospace;
 
 $portfolio-typography-config: mat.define-typography-config(
-  $headline-1: mat.define-typography-level(2.1em, 1.9em, 900, $portfolio-display-family, normal),
-  $headline-2: mat.define-typography-level(1.5em, 1.7em, 300, $portfolio-display-family, normal),
-  $headline-3: mat.define-typography-level(1.4em, 1.6em, 300, $portfolio-display-family, normal),
-  $headline-4: mat.define-typography-level(1.3em, 1.5em, 400, $portfolio-display-family, normal),
-  $headline-5: mat.define-typography-level(2.3em, 1.5em, 400, $portfolio-body-family, normal),
-  $headline-6: mat.define-typography-level(1.9em, 1.5em, 400, $portfolio-body-family, normal),
-  $subtitle-1: mat.define-typography-level(1.5em, 1.5em, 500, $portfolio-body-family, normal),
-  $subtitle-2: mat.define-typography-level(.9em, 1.5em, 500, $portfolio-body-family, normal),
-  $body-1: mat.define-typography-level(1em, 1.2em, 500, $portfolio-body-family, normal),
-  $body-2: mat.define-typography-level(.9em, 1.1em, 400, $portfolio-body-family, normal),
-  $caption: mat.define-typography-level(.9em, 1.1em, 500, $portfolio-link-family, normal),
-  $button: mat.define-typography-level(1em, 1.2em, 300, $portfolio-link-family, normal)
+  $headline-1: mat.define-typography-level(24pt, 28pt, 900, $portfolio-display-family, normal),
+  $headline-2: mat.define-typography-level(20pt, 28pt, 300, $portfolio-display-family, normal),
+  $headline-3: mat.define-typography-level(18pt, 16pt, 300, $portfolio-display-family, normal),
+  $headline-4: mat.define-typography-level(14pt, 16pt, 400, $portfolio-display-family, normal),
+  $headline-5: mat.define-typography-level(28pt, 42pt, 400, $portfolio-body-family, normal),
+  $headline-6: mat.define-typography-level(12pt, 16pt, 400, $portfolio-body-family, normal),
+  $subtitle-1: mat.define-typography-level(16pt, 18pt, 500, $portfolio-body-family, normal),
+  $subtitle-2: mat.define-typography-level(11pt, 13pt, 400, $portfolio-body-family, normal),
+  $body-1: mat.define-typography-level(16pt, 18pt, 400, $portfolio-body-family, normal),
+  $body-2: mat.define-typography-level(12pt, 14pt, 400, $portfolio-body-family, normal),
+  $caption: mat.define-typography-level(12pt, 16pt, 300, $portfolio-link-family, normal),
+  $button: mat.define-typography-level(24pt, 32pt, 300, $portfolio-link-family, normal),
 );
 
 $portfolio-theme: mat.define-light-theme((

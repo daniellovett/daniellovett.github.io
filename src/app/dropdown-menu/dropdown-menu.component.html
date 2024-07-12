@@ -1,0 +1,19 @@
+<div
+    [id]="'dropdown' + index"
+    role="listbox"
+    [attr.aria-label]="label"
+    class="dropdown__menu"
+>
+    <div
+        *ngFor="let option of options"
+        #option
+        tabindex="0"
+        role="option"
+        [attr.aria-selected]="value === option"
+        [class]="{'dropdown__item': true, 'dropdown__item--selected': value === option}"
+        (click)="selectOption(option)"
+        (keydown)="onKeyDown($event, option)"
+    >
+        {{option}}
+    </div>
+</div>
