@@ -13,6 +13,7 @@ export class DropdownMenuComponent implements AfterViewInit {
   @Input() value: string = '';
   @Input() label: string = '';
   @Input() index: number = 0;
+  @Input() role: string = 'listbox';
   @Output() optionSelected = new EventEmitter<string>
   @Output() closeDropdown = new EventEmitter<boolean>
   @ViewChildren('option') optionElementRefs!: QueryList<ElementRef>;

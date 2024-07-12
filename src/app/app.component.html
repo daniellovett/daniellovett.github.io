@@ -1,5 +1,31 @@
 <div class="navbar">
   <div class="navbar__brand" tabindex="0" (click)="router.navigate(['/home'])">Daniel Lovett</div>
+  <div class="navbar__fill"></div>
+  <div class="navbar__item-container">
+    <div class="navbar__dropdown">
+      <div class="navbar__item navbar__item--tablet" (click)="toggleNavDropdown()">
+        Projects
+        <div class="navbar__icon">
+          menu
+        </div>
+      </div>
+      <div class="navbar__item navbar__item--mobile" (click)="toggleNavDropdown()">
+        <div class="navbar__icon">
+          menu
+        </div>
+      </div>
+      <app-dropdown-menu
+        *ngIf="navMenuExpanded"
+        [options]="navOptions"
+        value=""
+        label="site navigation"
+        [index]="index"
+        role="listbox"
+        (optionSelected)="changeRoute($event)"
+        (closeDropdown)="toggleNavDropdown()"
+      ></app-dropdown-menu>
+    </div>
+  </div>
 </div>
 <div class="app-body">
   <div class="app-body__main">

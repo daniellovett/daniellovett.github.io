@@ -52,16 +52,62 @@ li:not(:last-child) {
     }
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
 
     &__brand {
+        flex: 0 0 auto;
         @include mat.typography-level($portfolio-typography-config, 'headline-1');
         cursor: pointer;
     }
 
+    &__fill {
+        flex: 1 1 100%;
+    }
+
     &__item {
         @include mat.typography-level($portfolio-typography-config, 'headline-3');
+        flex: 0 0 100%;
+        color: black;
+        @media (prefers-color-scheme: dark) {
+            color: white;
+        }
+        display: flex;
+        flex-direction: row;
+
+        &--tablet {
+            display: none;
+            visibility: hidden;
+        }
+
+        &--mobile {
+            display: none;
+            visibility: hidden;
+        }
+
+        &-container {
+            flex: 0 0 auto;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &__dropdown {
+        flex: 0 0 auto;
+        position: relative;
+        padding: 0px;
+
+        & .dropdown__menu {
+            top: 150%;
+            right: 0px;
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        vertical-align: middle;
+        font-family: 'Material Icons';
+        font-size: 24pt;
     }
 }
 
@@ -343,6 +389,11 @@ $breakpoint-mobile: 700px;
 $breakpoint-tablet: 1200px;
 
 @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+    .navbar__item--tablet {
+        display: block;
+        visibility: visible;
+    }
+    
     .app-body {
         &__separator {
             display: none;
@@ -362,6 +413,11 @@ $breakpoint-tablet: 1200px;
 }
 
 @media (max-width: $breakpoint-mobile) {
+    .navbar__item--mobile {
+        display: block;
+        visibility: visible;
+    }
+
     .app-body {
         &__main {
             padding: 25px 25px 50px;
