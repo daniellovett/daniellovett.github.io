@@ -22,8 +22,8 @@ $portfolio-typography-config: mat.define-typography-config(
   $headline-6: mat.define-typography-level(12pt, 16pt, 400, $portfolio-body-family, normal),
   $subtitle-1: mat.define-typography-level(16pt, 18pt, 500, $portfolio-body-family, normal),
   $subtitle-2: mat.define-typography-level(11pt, 13pt, 400, $portfolio-body-family, normal),
-  $body-1: mat.define-typography-level(16pt, 18pt, 400, $portfolio-body-family, normal),
-  $body-2: mat.define-typography-level(12pt, 14pt, 400, $portfolio-body-family, normal),
+  $body-1: mat.define-typography-level(16pt, 20pt, 300, $portfolio-body-family, normal),
+  $body-2: mat.define-typography-level(12pt, 16pt, 400, $portfolio-body-family, normal),
   $caption: mat.define-typography-level(12pt, 16pt, 300, $portfolio-link-family, normal),
   $button: mat.define-typography-level(24pt, 32pt, 300, $portfolio-link-family, normal),
 );
